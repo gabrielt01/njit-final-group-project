@@ -92,16 +92,19 @@ test('Clicking on "What Our Customers Have to Say" scrolls to Testimonials secti
   await expect(testimonialsSection).toBeVisible();
 });
 
-// Test #7 Mailchimp Test
+// Test #7 Mailchimp Subscription Test
 test('Mailchimp subscription test from business site', async ({ page }) => {
   // Navigate to your business website
   await page.goto('https://njit-final-group-project.vercel.app');
 
+
   // Click the 'Join Today' button
   await page.click('a.btn--secondary[href="http://eepurl.com/iFjGxI"]');
 
+
   // Wait for the new page to load (Mailchimp subscription form)
   await page.waitForLoadState('networkidle');
+
 
   // Fill out the subscription form on Mailchimp page
 // Fill out the subscription form on Mailchimp page with fake data
@@ -109,8 +112,12 @@ await page.fill('input[name="MERGE0"]', 'test@example.com'); // Corrected select
 await page.fill('input[name="MERGE1"]', 'TestFirstName'); // First Name
 await page.fill('input[name="MERGE2"]', 'TestLastName'); // Last Name
 
+
+
+
   // Click the 'Subscribe' button on Mailchimp page
   await page.click('input.formEmailButton[name="submit"]');
+
 
   // Check for confirmation - adjust based on Mailchimp's confirmation behavior
   // Example: await expect(page).toHaveURL('https://app.us12.list-manage.com/subscribe/post');
