@@ -117,8 +117,4 @@ await page.fill('input[name="MERGE2"]', 'TestLastName'); // Last Name
 
   // Click the 'Subscribe' button on Mailchimp page
   await page.click('input.formEmailButton[name="submit"]');
-
-
-  // Check for confirmation - adjust based on Mailchimp's confirmation behavior
-  // Example: await expect(page).toHaveURL('https://app.us12.list-manage.com/subscribe/post');
 });
