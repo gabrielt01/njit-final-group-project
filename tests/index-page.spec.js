@@ -117,4 +117,3 @@ await page.fill('input[name="MERGE2"]', 'TestLastName'); // Last Name
 
   // Click the 'Subscribe' button on Mailchimp page
   await page.click('input.formEmailButton[name="submit"]');
-});
